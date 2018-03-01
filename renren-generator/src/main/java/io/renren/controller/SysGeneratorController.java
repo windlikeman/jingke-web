@@ -19,11 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 代码生成器
- * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2016年12月19日 下午9:12:58
+ * @author jingke
  */
 @Controller
 @RequestMapping("/sys/generator")
@@ -59,7 +55,7 @@ public class SysGeneratorController {
 		byte[] data = sysGeneratorService.generatorCode(tableNames);
 		
 		response.reset();  
-        response.setHeader("Content-Disposition", "attachment; filename=\"renren.zip\"");  
+        response.setHeader("Content-Disposition", "attachment; filename=\"code-come.zip\"");
         response.addHeader("Content-Length", "" + data.length);  
         response.setContentType("application/octet-stream; charset=UTF-8");  
   
