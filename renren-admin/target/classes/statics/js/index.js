@@ -93,7 +93,7 @@ var vm = new Vue({
                 area: ['806px', '467px'],
                 closeBtn: 1,
                 shadeClose: false,
-                content: ['http://cdn.renren.io/donate.jpg', 'no']
+                content: ['http://localhost:8080/renren-generator/image/IMG_1139.JPG', 'no']
             });
         }
 	},
