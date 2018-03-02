@@ -57,12 +57,25 @@ public class GenUtils {
 		templates.add("template/mybatis/menu.sql.vm");
 		return templates;
 	}
-	
+
+	public static List<String> getJpaTemplates(){
+		List<String> templates = new ArrayList<String>();
+		templates.add("template/jpa/Service.java.vm");
+		templates.add("template/jpa/ServiceImpl.java.vm");
+		templates.add("template/jpa/Controller.java.vm");
+		templates.add("template/jpa/Repository.java.vm");
+		return templates;
+	}
+
 	/**
-	 * 生成代码
+     * 生成代码
+	 * @param table
+     * @param columns
+     * @param zip
+     * @param type 类型为1 mybatis   类型为2 Jpa
 	 */
 	public static void generatorCode(Map<String, String> table,
-			List<Map<String, String>> columns, ZipOutputStream zip){
+			List<Map<String, String>> columns, ZipOutputStream zip ,Integer type){
 		//配置信息
 		Configuration config = getConfig();
 		boolean hasBigDecimal = false;
@@ -136,23 +149,46 @@ public class GenUtils {
         VelocityContext context = new VelocityContext(map);
         
         //获取模板列表
-		List<String> templates = getTemplates();
-		for(String template : templates){
-			//渲染模板
-			StringWriter sw = new StringWriter();
-			Template tpl = Velocity.getTemplate(template, "UTF-8");
-			tpl.merge(context, sw);
-			
-			try {
-				//添加到zip
-				zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package"), config.getString("moduleName"))));
-				IOUtils.write(sw.toString(), zip, "UTF-8");
-				IOUtils.closeQuietly(sw);
-				zip.closeEntry();
-			} catch (IOException e) {
-				throw new RRException("渲染模板失败，表名：" + tableEntity.getTableName(), e);
+		List<String> templates = null;
+		if (type == 1 ){
+			templates = getTemplates();
+			for(String template : templates){
+				//渲染模板
+				StringWriter sw = new StringWriter();
+				Template tpl = Velocity.getTemplate(template, "UTF-8");
+				tpl.merge(context, sw);
+
+				try {
+					//添加到zip
+					zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package"), config.getString("moduleName"))));
+					IOUtils.write(sw.toString(), zip, "UTF-8");
+					IOUtils.closeQuietly(sw);
+					zip.closeEntry();
+				} catch (IOException e) {
+					throw new RRException("渲染模板失败，表名：" + tableEntity.getTableName(), e);
+				}
 			}
 		}
+		if (type == 2 ){
+			templates = getJpaTemplates();
+			for(String template : templates){
+				//渲染模板
+				StringWriter sw = new StringWriter();
+				Template tpl = Velocity.getTemplate(template, "UTF-8");
+				tpl.merge(context, sw);
+
+				try {
+					//添加到zip
+					zip.putNextEntry(new ZipEntry(getJpaFileName(template, tableEntity.getClassName(), config.getString("package"), config.getString("moduleName"))));
+					IOUtils.write(sw.toString(), zip, "UTF-8");
+					IOUtils.closeQuietly(sw);
+					zip.closeEntry();
+				} catch (IOException e) {
+					throw new RRException("渲染模板失败，表名：" + tableEntity.getTableName(), e);
+				}
+			}
+		}
+
 	}
 	
 	
@@ -231,6 +267,33 @@ public class GenUtils {
 			return className.toLowerCase() + "_menu.sql";
 		}
 
+		return null;
+	}
+
+	/**
+	 * 获取文件名
+	 */
+	public static String getJpaFileName(String template, String className, String packageName, String moduleName) {
+		String packagePath = "main" + File.separator + "java" + File.separator;
+		if (StringUtils.isNotBlank(packageName)) {
+			packagePath += packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
+		}
+
+		if (template.contains("Repository.java.vm" )) {
+			return packagePath + "repository" + File.separator + className + "Repository.java";
+		}
+
+		if (template.contains("Service.java.vm" )) {
+			return packagePath + "service" + File.separator + className + "Service.java";
+		}
+
+		if (template.contains("ServiceImpl.java.vm" )) {
+			return packagePath + "service" + File.separator + "impl" + File.separator + className + "ServiceImpl.java";
+		}
+
+		if (template.contains("Controller.java.vm" )) {
+			return packagePath + "controller" + File.separator + className + "Controller.java";
+		}
 		return null;
 	}
 }

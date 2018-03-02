@@ -1,10 +1,6 @@
-package ${package}.${moduleName}.service;
-
-import com.baomidou.mybatisplus.service.IService;
-import ${mainPath}.common.utils.PageUtils;
-import ${package}.${moduleName}.entity.${className}Entity;
-
-import java.util.Map;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.stereotype.Repository;
 
 /**
  * ${comments}
@@ -13,8 +9,7 @@ import java.util.Map;
  * @email ${email}
  * @date ${datetime}
  */
-public interface ${className}Service extends IService<${className}Entity> {
+@Repository
+public interface ${className}Repository extends JpaRepository<${className},Integer>,JpaSpecificationExecutor<${className}> {
 
-    PageUtils queryPage(Map<String, Object> params);
 }
-

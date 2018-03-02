@@ -52,7 +52,7 @@ public class SysGeneratorController {
 		String tables = request.getParameter("tables");
 		tableNames = JSON.parseArray(tables).toArray(tableNames);
 		
-		byte[] data = sysGeneratorService.generatorCode(tableNames);
+		byte[] data = sysGeneratorService.generatorCode(tableNames,1);
 		
 		response.reset();  
         response.setHeader("Content-Disposition", "attachment; filename=\"code-come.zip\"");
@@ -60,5 +60,24 @@ public class SysGeneratorController {
         response.setContentType("application/octet-stream; charset=UTF-8");  
   
         IOUtils.write(data, response.getOutputStream());  
+	}
+
+	/**
+	 * 生成代码
+	 */
+	@RequestMapping("/jpaCode")
+	public void jpacode(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		String[] tableNames = new String[]{};
+		String tables = request.getParameter("tables");
+		tableNames = JSON.parseArray(tables).toArray(tableNames);
+
+		byte[] data = sysGeneratorService.generatorCode(tableNames,2);
+
+		response.reset();
+		response.setHeader("Content-Disposition", "attachment; filename=\"code-come.zip\"");
+		response.addHeader("Content-Length", "" + data.length);
+		response.setContentType("application/octet-stream; charset=UTF-8");
+
+		IOUtils.write(data, response.getOutputStream());
 	}
 }

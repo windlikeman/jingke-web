@@ -55,7 +55,14 @@ var vm = new Vue({
 				return ;
 			}
 			location.href = "sys/generator/code?tables=" + JSON.stringify(tableNames);
-		}
+		},
+        generatorJpa: function() {
+            var tableNames = getSelectedRows();
+            if(tableNames == null){
+                return ;
+            }
+            location.href = "sys/generator/jpaCode?tables=" + JSON.stringify(tableNames);
+        }
 	}
 });
 
