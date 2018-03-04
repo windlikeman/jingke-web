@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Bean;
 import java.util.Arrays;
 
 
+/**
+ * @author jingke
+ */
 @SpringBootApplication
 @MapperScan(basePackages = {"io.renren.modules.*.dao"})
 public class AdminApplication{

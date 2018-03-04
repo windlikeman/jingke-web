@@ -1,18 +1,18 @@
 {
+  "hints": [],
   "groups": [
     {
-      "name": "spring.datasource.druid.first",
-      "type": "javax.sql.DataSource",
       "sourceType": "io.renren.datasources.DynamicDataSourceConfig",
-      "sourceMethod": "firstDataSource()"
+      "name": "spring.datasource.druid.first",
+      "sourceMethod": "firstDataSource()",
+      "type": "javax.sql.DataSource"
     },
     {
-      "name": "spring.datasource.druid.second",
-      "type": "javax.sql.DataSource",
       "sourceType": "io.renren.datasources.DynamicDataSourceConfig",
-      "sourceMethod": "secondDataSource()"
+      "name": "spring.datasource.druid.second",
+      "sourceMethod": "secondDataSource()",
+      "type": "javax.sql.DataSource"
     }
   ],
-  "properties": [],
-  "hints": []
+  "properties": []
 }
