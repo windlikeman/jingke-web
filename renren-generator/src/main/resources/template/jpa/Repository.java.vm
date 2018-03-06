@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
  * @date ${datetime}
  */
 @Repository
-public interface ${className}Repository extends JpaRepository<${className},Integer>,JpaSpecificationExecutor<${className}> {
+public interface ${className}Repository extends JpaRepository<${className},Long>,JpaSpecificationExecutor<${className}> {
 
 }

@@ -68,7 +68,7 @@ jingke-web
 - 视图框架：Spring MVC 4.3
 - 持久层框架：MyBatis 3.3
 - 定时器：Quartz 2.3
-- 数据库连接池：Druid 1.1
+- 数据库连接池：druid-spring-boot-starter 1.1.8
 - 日志管理：SLF4J 1.7、Log4j
 - 页面交互：Vue2.x
 
@@ -84,7 +84,7 @@ jingke-web
 
  **本地部署**
 - 通过git下载源码
-- 创建数据库renren_security，数据库编码为UTF-8
+- 创建数据库springboot，数据库编码为UTF-8
 - 执行db/mysql.sql文件，初始化数据【按需导入表结构及数据】
 - 修改application-dev.yml文件，更新MySQL账号和密码
 - 在jingke-web目录下，执行mvn clean install

@@ -17,6 +17,8 @@ import java.util.Arrays;
 @MapperScan(basePackages = {"io.renren.modules.*.dao"})
 public class AdminApplication{
 
+	//http://localhost:8080/renren-admin
+
 	public static void main(String[] args) {
 		SpringApplication.run(AdminApplication.class, args);
 	}
