@@ -19,8 +19,8 @@ import java.util.Date;
 
 /**
  * 注册接口
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-03-26 17:27
  */
 @RestController

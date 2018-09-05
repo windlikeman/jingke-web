@@ -38,8 +38,8 @@ import java.io.IOException;
 /**
  * 登录相关
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2016年11月10日 下午1:15:31
  */
 @Controller

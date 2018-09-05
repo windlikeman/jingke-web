@@ -24,8 +24,8 @@ import io.renren.modules.sys.service.SysConfigService;
 
 /**
  * 文件上传Factory
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-03-26 10:18
  */
 public final class OSSFactory {

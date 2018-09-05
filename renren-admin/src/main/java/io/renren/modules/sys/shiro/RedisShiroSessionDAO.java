@@ -29,8 +29,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * shiro session dao
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017/9/27 21:35
  */
 @Component

@@ -26,7 +26,7 @@ import java.lang.reflect.Method;
 /**
  * 执行定时任务
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 1.2.0 2016-11-28
  */
 public class ScheduleRunnable implements Runnable {

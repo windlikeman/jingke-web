@@ -28,8 +28,8 @@ import org.springframework.stereotype.Component;
 /**
  * Redis切面处理类
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-07-17 23:30
  */
 @Aspect

@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * 数据字典
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 3.1.0 2018-01-27
  */
 @RestController

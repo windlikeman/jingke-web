@@ -23,7 +23,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 /**
  * 资源
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 3.0.0 2018-01-25
  */
 @Configuration

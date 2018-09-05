@@ -42,7 +42,7 @@ import java.util.Date;
 /**
  * 系统日志，切面处理类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 1.3.0 2017-03-08
  */
 @Aspect

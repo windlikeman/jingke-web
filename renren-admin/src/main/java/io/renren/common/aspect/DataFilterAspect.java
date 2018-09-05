@@ -39,7 +39,7 @@ import java.util.*;
 /**
  * 数据过滤，切面处理类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 3.0.0 2017-09-17
  */
 @Aspect

@@ -24,8 +24,8 @@ import java.util.List;
 /**
  * 角色与部门对应关系
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017年6月21日 23:33:46
  */
 public interface SysRoleDeptDao extends BaseMapper<SysRoleDeptEntity> {

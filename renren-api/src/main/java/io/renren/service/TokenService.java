@@ -22,8 +22,8 @@ import io.renren.entity.TokenEntity;
 /**
  * 用户Token
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-03-23 15:22:07
  */
 public interface TokenService extends IService<TokenEntity> {

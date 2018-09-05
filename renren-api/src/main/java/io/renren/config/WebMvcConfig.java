@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * MVC配置
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-04-20 22:30
  */
 @Configuration

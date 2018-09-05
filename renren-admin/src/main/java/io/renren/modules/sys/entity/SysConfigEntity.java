@@ -23,8 +23,8 @@ import org.hibernate.validator.constraints.NotBlank;
 /**
  * 系统配置信息
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2016年12月4日 下午6:43:36
  */
 @TableName("sys_config")

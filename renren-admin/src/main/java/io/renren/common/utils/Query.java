@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * 查询参数
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 2.0.0 2017-03-14
  */
 public class Query<T> extends LinkedHashMap<String, Object> {

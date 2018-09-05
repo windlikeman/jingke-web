@@ -18,8 +18,8 @@ import java.util.Map;
 /**
  * 登录接口
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-03-23 15:31
  */
 @RestController

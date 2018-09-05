@@ -26,8 +26,8 @@ import org.springframework.stereotype.Component;
 /**
  * 系统配置Redis
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017/7/18 21:08
  */
 @Component

@@ -24,8 +24,8 @@ import org.springframework.stereotype.Component;
 /**
  * Spring Context 工具类
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2016年11月29日 下午11:45:51
  */
 @Component

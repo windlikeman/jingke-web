@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 系统页面视图
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2016年11月24日 下午11:05:27
  */
 @Controller

@@ -22,7 +22,7 @@ import java.util.HashMap;
 /**
  * Map工具类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author jingke
  * @since 3.0.0
  */
 public class MapUtils extends HashMap<String, Object> {

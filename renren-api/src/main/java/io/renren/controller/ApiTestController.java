@@ -16,8 +16,8 @@ import springfox.documentation.annotations.ApiIgnore;
 /**
  * 测试接口
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
+ * @author jingke
+ * @email
  * @date 2017-03-23 15:47
  */
 @RestController
