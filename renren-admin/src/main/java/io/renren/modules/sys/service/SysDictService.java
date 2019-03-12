@@ -26,7 +26,7 @@ import java.util.Map;
  * 数据字典
  *
  * @author jingke
- * @since 3.1.0 2018-01-27
+ * @since 3.1.1.RELEASE 2018-01-27
  */
 public interface SysDictService extends IService<SysDictEntity> {
 

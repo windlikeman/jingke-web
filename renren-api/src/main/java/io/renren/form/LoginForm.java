@@ -24,7 +24,7 @@ import org.hibernate.validator.constraints.NotBlank;
  * 登录表单
  *
  * @author jingke
- * @since 3.1.0 2018-01-25
+ * @since 3.1.1.RELEASE 2018-01-25
  */
 @ApiModel(value = "登录表单")
 public class LoginForm {

@@ -63,7 +63,7 @@ jingke-web
 <br>
 
  **技术选型：** 
-- 核心框架：Spring Boot 2.0.0.M7
+- 核心框架：Spring Boot 2.1.1.RELEASE
 - 安全框架：Apache Shiro 1.3
 - 视图框架：Spring MVC 4.3
 - 持久层框架：MyBatis 3.3

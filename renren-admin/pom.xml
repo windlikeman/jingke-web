@@ -2,7 +2,7 @@
 	<parent>
 		<groupId>com.web.common</groupId>
 		<artifactId>jingke-web</artifactId>
-		<version>3.1.0</version>
+		<version>3.1.1.RELEASE</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>renren-admin</artifactId>
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>com.web.common</groupId>
 			<artifactId>renren-common</artifactId>
-			<version>3.1.0</version>
+			<version>3.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.freemarker</groupId>
@@ -45,26 +45,12 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<exclusions>
-				<!--<exclusion>-->
-				<!--<groupId>org.springframework.boot</groupId>-->
-				<!--<artifactId>spring-boot</artifactId>-->
-				<!--</exclusion>-->
-				<!--<exclusion>-->
-				<!--<groupId>com.alibaba</groupId>-->
-				<!--<artifactId>druid</artifactId>-->
-				<!--</exclusion>-->
-			</exclusions>
+			<version>1.1.14</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 		</dependency>
-		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.boot/spring-boot &ndash;&gt;-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot</artifactId>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>
@@ -121,12 +107,6 @@
 			<artifactId>aliyun-sdk-oss</artifactId>
 			<version>${aliyun.oss.version}</version>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>com.alibaba</groupId>-->
-			<!--<artifactId>druid</artifactId>-->
-			<!--<version>1.1.6</version>-->
-		<!--</dependency>-->
-		<!--访问静态资源-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>

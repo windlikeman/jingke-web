@@ -27,7 +27,7 @@ import java.io.Serializable;
  * 数据字典
  *
  * @author jingke
- * @since 3.1.0 2018-01-27
+ * @since 3.1.1.RELEASE 2018-01-27
  */
 @TableName("sys_dict")
 public class SysDictEntity implements Serializable {
